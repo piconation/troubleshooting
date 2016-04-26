@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBank</title>
+</head>
+<body>
+<div id="container" style="width: 300px; text-align: center; border: solid; border-color: red"><br>
+    <div id="mybalance">$ 1031
+    </div><br>
+    <div onclick="javascript: addfive()"><button type="button">Deposit $5</button>
+    </div><br>
+</div>
+
+
+<script>
+function addfive() {
+    var acctbalance = document.getElementById("mybalance").innerHTML;
+    var adjacctbalance = acctbalance.split(2);
+    var myResult = Number(adjacctbalance[1]) + 5;
+    document.getElementById("mybalance").innerHTML = "$" + myResult;
+}
+</script>
+
+</body>
+</html>
